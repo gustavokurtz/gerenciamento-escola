@@ -35,6 +35,7 @@ public class AlunoController {
         return ResponseEntity.ok(alunosService.listarAlunoId(uuid));
     }
 
+
     @PutMapping("/{uuid}")
     public void atualizarAlunoId(@PathVariable UUID uuid, @RequestBody AlunosEntities alunosEntities){
         alunosService.atualizarAlunoId(uuid, alunosEntities);
