@@ -27,9 +27,14 @@ public class AlunosEntities {
     @Column(nullable = false)
     private String aprovado_ou_reprovado;
 
-
     @Column(nullable = false, columnDefinition = "INT DEFAULT 0")
     private int nota;
+
+    @ManyToOne
+    @JoinColumn(name = "turma_id", nullable = false)
+    private TurmaEntities turma;
+
+
 
     @JsonIgnore
     public String getStatus() {
